@@ -1,0 +1,22 @@
+//Q. Write a C++ program code that prompts the user to enter a binary number and then outputs its decimal form. For eg, user enters '1010' and output is 10.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+int bn, sum = 0;
+	cout << "Enter the binary number: ";
+	cin >> bn;
+
+	int i = 1;
+	while (bn != 0)
+	{
+		if (bn % 10 == 1)
+		{
+			sum += i;
+		}
+		bn /= 10;
+		i = i * 2;
+	}
+	cout << "The decimal form is " << sum;
+}
