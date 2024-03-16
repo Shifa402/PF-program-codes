@@ -1,0 +1,33 @@
+//A triangular number is a number that can be represented as a triangle with dots. For example, 1, 3, 6, 10, etc., are triangular numbers. Write a code that checks if the input number
+//can be represented as a triangular number or not. If it can, it prints "Triangular"; otherwise, it prints "Not triangular".
+
+#include<iostream>
+using namespace std;
+int main()
+{int n, c, i;
+	cout << "Enter a number" << endl;
+	cin >> n;
+	c = 0;
+	if (n > 0)
+	{
+		i = 1;
+		while (c < n)
+		{
+			c += i;
+			i++;
+		}
+
+		if (c == n)
+		{
+			cout << "Triangular" << endl;
+		}
+		else
+		{
+			cout << "Not triangular" << endl;
+		}
+	}
+	else
+	{
+		cout << "Not triangular" << endl;
+	}
+}
