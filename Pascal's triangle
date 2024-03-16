@@ -1,0 +1,30 @@
+//Pascal's Triangle is a triangular array of numbers in which each number is the sum of the two directly above it. The first few rows of Pascal's Triangle look like this:
+//    1
+//   1 1
+//  1 2 1
+// 1 3 3 1
+//1 4 6 4 1
+//Each number in the triangle represents a combination of the row number and the position of the number in that row. For example, the number "6" in the fifth row is the 
+//combination of selecting 2 items out of 4 items (from the row number). It is often used in combinatorics and probability. Write a C++ code to draw a pascal's triangle.
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, k, j, n, val;
+	cin >> n;
+	for (i = 1; i <= n; i++)
+	{
+		for (k = 1; k <= n - i; k++)
+		{
+			cout << "  ";
+		}
+		val = 1;
+		for (j = 1; j <= i; j++)
+		{
+			cout << val << "   ";
+			val = val * (i - j) / j;
+		}
+		cout << endl;
+	}
+}
